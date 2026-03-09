@@ -1,7 +1,9 @@
+import path from "path";
+import { fileURLToPath } from "url";
+
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
-import { createServer as createViteServer } from "vite";
 import db from "./src/db.ts";
 
 async function startServer() {
@@ -109,8 +111,15 @@ async function startServer() {
     res.json({ success: true });
   });
 
-  const vite = await createViteServer({ server: { middlewareMode: true }, appType: "spa" });
-  app.use(vite.middlewares);
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
+  // Serve built frontend
+  app.use(express.static(path.join(__dirname, "dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+  });
   app.listen(PORT, "0.0.0.0", () => console.log(`Server: http://localhost:${PORT}`));
 }
 startServer();
