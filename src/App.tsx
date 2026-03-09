@@ -11,10 +11,7 @@ import Layout from "./components/Layout";
 
 export default function App() {
 
-  const [user, setUser] = useState<User | null>(() => {
-    const saved = localStorage.getItem("user");
-    return saved ? JSON.parse(saved) : null;
-  });
+  const [user, setUser] = useState<User | null>(null);
 
   const handleLogin = (u: User) => {
     setUser(u);
