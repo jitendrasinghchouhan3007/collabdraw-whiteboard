@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 # CollabDraw – Collaborative Whiteboard Application
-#### This web page is hosted [here!](https://todojustdoit.netlify.app/)
+#### This web page is hosted [here!](https://collabdraw-whiteboard-1.onrender.com)
 
 ### *Project Overview*:
 CollabDraw is a collaborative whiteboard web application that allows users to create projects, manage whiteboards, and share projects with other users.
@@ -73,8 +73,36 @@ npm install
 <br/>
 
 # *Deployment:*
+### *This project is deployed using Render.*:
 
 
+### Live Demo
+
+🔗 https://collabdraw-whiteboard-1.onrender.com
+
+### Deployment Platform
+
+The application is hosted on Render, which runs both the backend server and the frontend build from a single service.
+
+### Deployment Steps
+
+* Push the project code to GitHub.
+* Create a new Web Service on Render.
+* Connect the GitHub repository.
+* Configure the build and start commands:
+  Build Command
+```
+npm install && npm run build
+```
+  Start Command
+```
+npx tsx server.ts
+```
+* Render automatically installs dependencies, builds the React frontend using Vite, and starts the Express server.
+
+### Automatic Deployments
+
+Whenever new code is pushed to GitHub, Render automatically redeploys the application with the latest changes.
 <br/>
 <br/>
 
