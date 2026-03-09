@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <header className="h-20 bg-white border-b border-gray-100 flex items-center justify-between px-8 shadow-sm">
+    <header className="h-16 sm:h-20 bg-white border-b border-gray-100 flex items-center justify-between px-4 sm:px-6 md:px-8 shadow-sm">
 
       <h2 className="text-2xl font-bold text-slate-800">
         {getPageTitle()}

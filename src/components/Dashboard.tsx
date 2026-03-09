@@ -24,7 +24,7 @@ export default function HomeDashboard({ user }: { user: User }) {
   }, [user.id]);
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-8 flex justify-between items-center">
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
       {/* Left */}
       <div className="flex items-start gap-6">

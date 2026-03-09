@@ -112,8 +112,7 @@ export default function ProjectDetail({ user }: { user: User }) {
         </div>
 
       </div>
-      <div className="bg-white rounded-2xl p-6 shadow-sm">
-
+      <div className="bg-white rounded-2xl p-6 shadow-sm overflow-x-auto">
         <table className="w-full text-sm border-collapse">
 
           <thead className="bg-gray-50">

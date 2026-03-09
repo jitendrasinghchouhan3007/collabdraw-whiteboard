@@ -8,7 +8,7 @@ export default function Sidebar({ user, onLogout }: { user: User; onLogout: () =
     const [openProfile, setOpenProfile] = useState(false);
     return (
         <aside
-            className="w-72 min-h-screen flex flex-col"
+          className="hidden md:flex w-72 min-h-screen flex-col"
             style={{
                 backgroundColor: "#ffffff",
                 boxShadow: "4px 0 20px rgba(0,0,0,0.12)"
