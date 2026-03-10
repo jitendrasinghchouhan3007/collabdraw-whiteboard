@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
-import db from "./src/db.ts";
+import db from "./src/db";
 
 async function startServer() {
   const app = express();
