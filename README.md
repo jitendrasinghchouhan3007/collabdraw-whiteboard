@@ -16,7 +16,7 @@ Users can:
 
 # *Technology Choices:*
 
-* ##### Frontend: React 19 + Vite (for speed and modern hooks).
+* ##### Frontend:Typescript + React 19 + Vite (for speed and modern hooks).
 * ##### Styling: Tailwind CSS v4 (utility-first, responsive design).
 * ##### Whiteboarding: TLDraw (professional-grade canvas engine).
 * ##### Backend: Node.js + Express (REST API for data management).
