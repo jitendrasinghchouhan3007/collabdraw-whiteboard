@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 # CollabDraw – Collaborative Whiteboard Application
-#### This web page is hosted [here!](https://collabdraw-whiteboard-1.onrender.com)
+#### This web page is hosted [here!](https://collabdraw-whiteboard-production-b8c8.up.railway.app/login)
 
 ### *Project Overview*:
 CollabDraw is a collaborative whiteboard web application that allows users to create projects, manage whiteboards, and share projects with other users.
@@ -73,36 +73,56 @@ npm install
 <br/>
 
 # *Deployment:*
-### *This project is deployed using Render.*:
 
 
 ### Live Demo
-
-🔗 https://collabdraw-whiteboard-1.onrender.com
+https://collabdraw-whiteboard-production-b8c8.up.railway.app
 
 ### Deployment Platform
 
-The application is hosted on Render, which runs both the backend server and the frontend build from a single service.
+The application is deployed using a modern cloud deployment setup to ensure accessibility and scalability.
+<br/>
+### Backend Deployment
 
-### Deployment Steps
+The backend server is deployed on Railway. Railway hosts the Node.js Express API and manages the application runtime environment.
 
-* Push the project code to GitHub.
-* Create a new Web Service on Render.
-* Connect the GitHub repository.
-* Configure the build and start commands:
-  Build Command
-```
-npm install && npm run build
-```
-  Start Command
-```
-npx tsx server.ts
-```
-* Render automatically installs dependencies, builds the React frontend using Vite, and starts the Express server.
+Steps used for backend deployment:
 
-### Automatic Deployments
+* Push the project repository to GitHub.
+* Connect the repository to Railway.
+* Railway automatically installs dependencies and runs the start script.
+* The backend API becomes publicly accessible via the Railway-generated domain.
+<br/>
 
-Whenever new code is pushed to GitHub, Render automatically redeploys the application with the latest changes.
+### Frontend Deployment
+
+The frontend application is deployed using Vercel. Vercel builds the React/Vite project and serves the static files through a global CDN for fast performance.
+
+Deployment steps:
+
+* Connect the GitHub repository to Vercel.
+* Configure build settings.
+* Build command:
+```
+npm run build
+```
+* Output directory:
+```
+dist
+```
+After deployment, Vercel provides a public URL for accessing the application.
+<br/>
+### Database
+
+The application uses SQLite as the database, managed through the better-sqlite3 library. The database file is automatically created when the server starts if it does not already exist.
+
+### Deployment Architecture
+
+Frontend (React + Vite) → Vercel
+Backend (Node.js + Express) → Railway
+Database → SQLite
+
+This architecture allows the frontend and backend to scale independently while keeping deployment simple and efficient.
 <br/>
 <br/>
 
